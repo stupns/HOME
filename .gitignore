@@ -1,4 +1,6 @@
 db.sqlite3
 /Trash
 /Studying
+/.ipynb_checkpoints
+/Jupyter
 Tasks.py
