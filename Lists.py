@@ -115,3 +115,5 @@ print(f'even numbers using cycle : {emptyList}')
 # list comprehension
 print(f'\n')
 [print(x) for x in emptyList]
+
+

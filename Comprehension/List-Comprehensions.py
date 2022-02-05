@@ -26,7 +26,7 @@ for student in NAMES:
 print(Fore.BLACK + Back.LIGHTBLUE_EX + Style.BRIGHT + ", ".join(PerScholas))
 print(155 * "-")
 
-# Using a ListComprehension you can reduce lines of code into a single line
+# Using a Comprehension you can reduce lines of code into a single line
 # ---------------------------------------------------------------------------
 PerScholas2 = [student for student in NAMES if student.startswith('S')]
 # the expression we want to appear on our list is simply the student; next loop over the names

@@ -31,7 +31,6 @@ def outer_func():
     a_num = 15
     b_num = 16
     def inner_func():
-        global a_num
         a_num = 20
         b_num = 21
         print('a_num inside inner_func :', a_num)
