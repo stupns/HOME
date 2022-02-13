@@ -5,3 +5,5 @@ db.sqlite3
 /Jupyter
 Tasks.py
 /.ipynb_checkpoints/COMPERHENSION-checkpoint.ipynb
+/TASKS/.pytest_cache
+/TASKS/TESTS/.pytest_cache
