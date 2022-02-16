@@ -1,4 +1,4 @@
-from TASKS.LAMBDA import *
+from TASKS.LAMBDA.LAMBDA import *
 
 
 def test_task1():
@@ -13,7 +13,7 @@ def test_task2():
     assert task2_quares == 30
 
 
-def test_task():
+def test_task3():
     assert list_task3 == [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 
 

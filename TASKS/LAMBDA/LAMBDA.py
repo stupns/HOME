@@ -5,8 +5,10 @@ Sample Output:
 25
 48
 """
-task1 = lambda a: a + 15
-task1_1 = lambda x, y: x * y
+import pytest
+
+# task1 =
+# task1_1 =
 
 """
 TASK 2. Write a Python program to create a function that takes one argument,
@@ -19,7 +21,7 @@ Quintuple the number 15 = 75
 
 
 def func_task2(n):
-    return lambda x: x * n
+    pass
 
 
 task2 = func_task2(2)
@@ -33,7 +35,7 @@ Sorting the List of Tuples:
 [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 """
 list_task3 = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
-list_task3.sort(key=lambda x: x[1])
+
 
 """
 TASK 4: Write a Python program to sort a list of dictionaries using Lambda.
@@ -48,7 +50,7 @@ list_of_dict_task4 = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
                       {'make': 'Mi Max', 'model': '2', 'color': 'Gold'},
                       {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
 
-task4 = sorted(list_of_dict_task4, key=lambda x: x['color'])
+# task4 =
 
 """
 TASK 5: Write a Python program to filter a list of integers using Lambda.
@@ -60,8 +62,8 @@ Odd numbers from the said list:
 [1, 3, 5, 7, 9]
 """
 nums_task5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-task5_even = list(filter(lambda x: x % 2 == 0, nums_task5))
-task5_odd = list(filter(lambda x: x % 2 != 0, nums_task5))
+# task5_even =
+# task5_odd =
 
 """
 TASK 6: Write a Python program to square and cube every number in a given list of integers using Lambda.
@@ -73,8 +75,8 @@ Cube every number of the said list:
 [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 """
 nums_task6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-square_nums6 = list(map(lambda x: x ** 2, nums_task6))
-cube_nums6 = list(map(lambda x: x ** 3, nums_task6))
+# square_nums6 =
+# cube_nums6 =
 
 """
 TASK 7: Write a Python program to find if a given string starts with a given character using Lambda.
@@ -83,7 +85,7 @@ True
 False
 """
 
-task7 = lambda x: True if x.startswith('P') else False
+# task7 =
 
 """
 TASK 8: Write a Python program to extract year, month, date and time using Lambda.
@@ -115,8 +117,8 @@ is_num9m('-16.4') -> True
 is_num9m('-24587.11') -> True
 """
 
-is_num = lambda x: x.replace('.', '', 1).isdigit()
-is_num9 = lambda r: is_num(r[1:]) if r[0] == '-' else is_num(r)
+# is_num =
+# is_num9 =
 
 """
 TASK 10: Write a Python program to create Fibonacci series upto n using Lambda.
@@ -132,7 +134,8 @@ Fibonacci series upto 9:
 """
 from functools import reduce
 
-fib_series = lambda n: reduce(lambda x, _: x + [x[-1] + x[-2]], range(n - 2), [0, 1])
+# fib_series =
+print(fib_series(4))
 
 """
 TASK 11: Write a Python program to find intersection of two given arrays using Lambda.
@@ -143,7 +146,7 @@ Intersection of the said arrays: [1, 2, 8, 9]
 """
 list_a = [1, 2, 3, 5, 7, 8, 9, 10]
 list_b = [1, 2, 4, 8, 9]
-task11 = list(filter(lambda x: x in list_a, list_b))
+# task11 =
 
 """
 TASK 12: Write a Python program to rearrange positive and negative numbers in a given array using Lambda.
@@ -151,7 +154,7 @@ Rearrange positive and negative numbers of the said array:
 [2, 5, 7, 8, 9, -10, -3, -1]
 """
 list_12 = [-1, 2, -3, 5, 7, 8, 9, -10]
-task12 = sorted(list_12, key=lambda i: 0 if i == 0 else -1 / i)
+# task12 =
 
 """
 TASK 13: Write a Python program to count the even, odd numbers in a given array of integers using Lambda
@@ -161,8 +164,8 @@ Number of even numbers in the above array: 3
 Number of odd numbers in the above array: 5
 """
 list_13 = [1, 2, 3, 5, 7, 8, 9, 10]
-odd_ctr = len(list(filter(lambda x: (x % 2 != 0), list_13)))
-even_ctr = len(list(filter(lambda x: (x % 2 == 0), list_13)))
+# odd_ctr =
+# even_ctr =
 
 """
 TASK 14: Write a Python program to find the values of length six in a given list using Lambda.
@@ -172,8 +175,8 @@ Friday
 Sunday
 """
 weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-task_lambda = filter(lambda day: day if len(day) == 6 else '', weekdays)
-task14 = [x for x in task_lambda]
+# task_lambda =
+# task14 = [x for x in task_lambda]
 
 """
 TASK 15: Write a Python program to add two given lists using map and lambda.
@@ -185,7 +188,7 @@ Result: after adding two list
 """
 list_c = [1, 2, 3]
 list_d = [4, 5, 6]
-task15 = list(map(lambda x, y: x + y, list_c, list_d))
+# task15 =
 
 """
 TASK 16: Write a Python program to find numbers divisible by nineteen or thirteen from a list of numbers using Lambda.
@@ -195,7 +198,7 @@ Numbers of the above list divisible by nineteen or thirteen:
 [19, 65, 57, 39, 152, 190]
 """
 list_16 = [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
-task16 = list(filter(lambda x: (x % 19 == 0 or x % 13 == 0), list_16))
+# task16 =
 
 """
 TASK 17: Write a Python program to find palindromes in a given list of strings using Lambda.
@@ -206,7 +209,7 @@ List of palindromes:
 """
 
 string = ['php', 'w3r', 'Python', 'abcd', 'Java', 'aaa']
-task17 = list(filter(lambda x: (x == "".join(reversed(x))), string))
+# task17 =
 
 """
 TASK 18: Write a Python program to find all anagrams of a string in a given list of strings using lambda.
@@ -220,7 +223,7 @@ from collections import Counter
 
 string_list = ["bcda", "abce", "cbda", "cbea", "adcb"]
 string18 = 'abcd'
-task18 = list(filter(lambda x: (Counter(string18) == Counter(x)), string_list))
+# task18 =
 
 """
 TASK 19: Write a Python program to find the numbers of a given string and store them in a list, display the numbers 
@@ -233,8 +236,9 @@ Numbers in sorted form:
 string19 = "sdf 23 safs8 5 sdfsd8 sdfs 56 21sfs 20 5"
 str_num = [x for x in string19.split(' ')]
 lenght = len(str_num)
-numbers19 = sorted([int(x) for x in str_num if x.isdigit()])
-task19 = [i for i in (filter(lambda x: x > lenght, numbers19))]
+# numbers19 =
+# task19 =
+
 """
 TASK 20: Write a Python program that multiply each number of given list with a given number using lambda function. 
 Original list: [2, 4, 6, 9, 11]
@@ -242,9 +246,10 @@ Given number: 2
 Result:
 4 8 12 18 22
 """
+
 list_20 = [2, 4, 6, 9, 11]
 n = 2
-task20 = ' '.join(map(str, list(map(lambda number: number * n, list_20))))
+# task20 =
 
 """
 TASK 21: Write a Python program that sum the length of the names of a given list of names after removing the names that 
@@ -253,7 +258,7 @@ Result:
 16
 """
 list_21 = ['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith']
-list_21 = list(filter(lambda el: el[0].isupper() and el[1:].islower(), list_21))
+# list_21 =
 task21 = len(''.join(list_21))
 
 """
@@ -265,8 +270,8 @@ Sum of the negative numbers: 48
 """
 
 list_22 = [2, 4, -6, -9, 11, -12, 14, -5, 17]
-summ_positive = sum(list(filter(lambda nums: nums > 0, list_22)))
-summ_negative = sum(list(filter(lambda nums: nums < 0, list_22)))
+# summ_positive =
+# summ_negative =
 
 """
 TASK 23: Write a Python program to find the list with maximum and minimum length using lambda.
@@ -280,15 +285,11 @@ list_23 = [[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
 
 
 def max_length_list(input_list):
-    max_length = max(len(x) for x in input_list)
-    max_list = max(input_list, key=lambda i: len(i))
-    return max_length, max_list
+    pass
 
 
 def min_length_list(input_list):
-    min_length = min(len(x) for x in input_list)
-    min_list = min(input_list, key=lambda i: len(i))
-    return min_length, min_list
+    pass
 
 
 """
@@ -297,8 +298,7 @@ TASK 24: Write a Python program to sort each sublist of strings in a given list 
 
 
 def sort_sublists(input_list):
-    result = [sorted(x, key=lambda x: x[0]) for x in input_list]
-    return result
+    pass
 
 
 color1 = [["green", "orange"], ["black", "white"], ["white", "black", "orange"]]
@@ -311,8 +311,7 @@ list25 = [[2], [0], [1, 3], [0, 7], [9, 11], [13, 15, 17]]
 
 
 def sort_sublists25(input_list):
-    result = sorted(input_list, key=lambda l: (len(l), l))
-    return result
+    pass
 
 
 """
@@ -325,45 +324,9 @@ list_26 = ['Python', 3, 2, 4, 5, 'version']
 
 
 def max_val(list_val):
-    max_val = max(list_val, key=lambda i: (isinstance(i, int), i))
-    return max_val
+    pass
 
 
 # ___________________________________________________TESTS
 
-task9_assert_true = ['26587', '4.2365', '00', '001']
-task9_assert_false = ['-12547', 'A001']
-if __name__ == '__main__':
-    assert task1(10) == 25
-    assert task1_1(12, 4) == 48
-    assert task2_quares == 30
-    assert list_task3 == [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
-    assert task4 == [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
-                     {'make': 'Samsung', 'model': 7, 'color': 'Blue'},
-                     {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}]
-    assert task5_even == [2, 4, 6, 8, 10]
-    assert task5_odd == [1, 3, 5, 7, 9]
-    assert square_nums6 == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-    assert cube_nums6 == [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
-    assert task7('Python') is True, task7('Java') is False
-    assert [x for x in task9_assert_true if is_num(x) is True] == task9_assert_true
-    assert [x for x in task9_assert_false if is_num(x) is False] == task9_assert_false
-    assert is_num9('-16.4') and is_num9('-16324.4') is True
-    assert fib_series(2) == [0, 1], fib_series(9) == [0, 1, 1, 2, 3, 5, 8, 13, 21]
-    assert task11 == [1, 2, 8, 9]
-    assert task12 == [2, 5, 7, 8, 9, -10, -3, -1]
-    assert odd_ctr == 5, even_ctr == 3
-    assert task14 == ['Monday', 'Friday', 'Sunday']
-    assert task15 == [5, 7, 9]
-    assert task16 == [19, 65, 57, 39, 152, 190]
-    assert task17 == ['php', 'aaa']
-    assert task18 == ['bcda', 'cbda', 'adcb']
-    assert task19 == [20, 23, 56]
-    assert task20 == '4 8 12 18 22'
-    assert task21 == 16
-    assert summ_positive == 48, summ_negative == -32
-    assert max_length_list(list_23) == (3, [13, 15, 17]), min_length_list(list_23) == (1, [0])
-    assert sort_sublists(color1) == [['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]
-    assert sort_sublists25(list25) == [[0], [2], [0, 7], [1, 3], [9, 11], [13, 15, 17]]
-    assert max_val(list_26) == 5
-    print('test is passed')
+pytest.main(['-rpP', 'TESTS/TESTS_LAMBDA.py'])

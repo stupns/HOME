@@ -1,4 +1,4 @@
-from TASKS.COMPREHENSION import *
+from TASKS.COMPREHENSION.COMPREHENSION import *
 
 
 def test_task1():

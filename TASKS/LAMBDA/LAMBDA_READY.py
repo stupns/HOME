@@ -8,7 +8,7 @@ Sample Output:
 import pytest
 
 task1 = lambda x: x + 15
-task1_1 = lambda x, y: x*y
+task1_1 = lambda x, y: x * y
 
 """
 TASK 2. Write a Python program to create a function that takes one argument,
@@ -19,8 +19,10 @@ Quadruple the number of 15 = 60
 Quintuple the number 15 = 75
 """
 
+
 def func_task2(n):
     return lambda x: x * n
+
 
 task2 = func_task2(2)
 task2_quares = task2(15)
@@ -73,8 +75,8 @@ Cube every number of the said list:
 [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 """
 nums_task6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-square_nums6 = list(map(lambda x: x**2, nums_task6))
-cube_nums6 = list(map(lambda x: x**3, nums_task6))
+square_nums6 = list(map(lambda x: x ** 2, nums_task6))
+cube_nums6 = list(map(lambda x: x ** 3, nums_task6))
 
 """
 TASK 7: Write a Python program to find if a given string starts with a given character using Lambda.
@@ -160,6 +162,7 @@ Original arrays:
 Number of even numbers in the above array: 3
 Number of odd numbers in the above array: 5
 """
+
 list_13 = [1, 2, 3, 5, 7, 8, 9, 10]
 odd_ctr = len(list(filter(lambda x: (x % 2 != 0), list_13)))
 even_ctr = len(list(filter(lambda x: (x % 2 == 0), list_13)))
@@ -171,6 +174,7 @@ Monday
 Friday
 Sunday
 """
+
 weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 task_lambda = filter(lambda day: day if len(day) == 6 else '', weekdays)
 task14 = [x for x in task_lambda]
@@ -183,6 +187,7 @@ Original list:
 Result: after adding two list
 [5, 7, 9]
 """
+
 list_c = [1, 2, 3]
 list_d = [4, 5, 6]
 task15 = list(map(lambda x, y: x + y, list_c, list_d))
@@ -216,6 +221,7 @@ from collections import Counter
 Anagrams of 'abcd' in the above string:
 ['bcda', 'cbda', 'adcb']
 """
+
 from collections import Counter
 
 string_list = ["bcda", "abce", "cbda", "cbea", "adcb"]
@@ -235,6 +241,7 @@ str_num = [x for x in string19.split(' ')]
 lenght = len(str_num)
 numbers19 = sorted([int(x) for x in str_num if x.isdigit()])
 task19 = [i for i in (filter(lambda x: x > lenght, numbers19))]
+
 """
 TASK 20: Write a Python program that multiply each number of given list with a given number using lambda function. 
 Original list: [2, 4, 6, 9, 11]
@@ -242,6 +249,7 @@ Given number: 2
 Result:
 4 8 12 18 22
 """
+
 list_20 = [2, 4, 6, 9, 11]
 n = 2
 task20 = ' '.join(map(str, list(map(lambda number: number * n, list_20))))
@@ -252,6 +260,7 @@ starts with an lowercase letter. Use lambda function.
 Result:
 16
 """
+
 list_21 = ['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith']
 list_21 = list(filter(lambda el: el[0].isupper() and el[1:].islower(), list_21))
 task21 = len(''.join(list_21))
@@ -276,6 +285,7 @@ List with maximum length of lists:
 List with minimum length of lists:
 (1, [0])
 """
+
 list_23 = [[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
 
 
