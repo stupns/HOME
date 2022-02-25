@@ -214,4 +214,4 @@ stopwords26 = {'face', 'formation', 'galaxies', 'has', 'hubble', 'resembles',
 
 task26 = {word.lower() for sentence in sentences26 for word in sentence.split(' ') if word not in stopwords26}
 
-pytest.main(['TESTS/TESTS_COMPREHENSION.py'])
+pytest.main(['-rpP', '..\\TESTS\\TESTS_COMPREHENSION.py'])

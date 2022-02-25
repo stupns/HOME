@@ -1,6 +1,6 @@
 import pytest
 
-from TASKS.СLASSES import Vehicle, Bus, Car, Driver
+from TASKS.CLASSES.СLASSES import Vehicle, Bus, Car, Driver
 
 
 @pytest.fixture

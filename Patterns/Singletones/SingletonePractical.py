@@ -101,7 +101,7 @@ class Database(metaclass=MetaSingleton):
 
     def connect(self):
         if self.connection is None:
-            self.connection = sqlite3.connect("../db.sqlite3")
+            self.connection = sqlite3.connect("../../db.sqlite3")
         return self.cursorobj
 
 

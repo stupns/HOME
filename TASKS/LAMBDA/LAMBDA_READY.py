@@ -340,4 +340,4 @@ def max_val(list_val):
 
 
 # ___________________________________________________TESTS
-pytest.main(['-rpP', 'TESTS/TESTS_LAMBDA.py'])
+pytest.main(['-rpP', '..\\TESTS\\TESTS_LAMBDA.py'])

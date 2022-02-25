@@ -35,7 +35,7 @@ task6 = []
 TASK 7: Find all of the numbers from 1–1000 that are divisible by 8.
 Use variable range(20).
 """
-nums7 = [x for x in range(20)]
+nums7 = []
 task7 = []
 
 """
@@ -211,12 +211,12 @@ task25 = []
 26 TASK : Get the unique list of words from the following sentences, excluding any stopwords.
 """
 
-sentences = ["The Hubble Space telescope has spotted",
+sentences26 = ["The Hubble Space telescope has spotted",
              "a formation of galaxies that resembles",
              "a smiling face in the sky"]
-stopwords = {'face', 'formation', 'galaxies', 'has', 'hubble', 'resembles',
+stopwords26 = {'face', 'formation', 'galaxies', 'has', 'hubble', 'resembles',
              'sky', 'smiling', 'space', 'spotted', 'telescope', 'that', 'the'}
 
 task26 = {}
 
-pytest.main(['-rpP', 'TESTS/TESTS_COMPREHENSION.py'])
+pytest.main(['-rpP', '..\\TESTS\\TESTS_COMPREHENSION.py'])
