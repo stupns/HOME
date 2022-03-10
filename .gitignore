@@ -16,6 +16,8 @@ TASKS/TESTS/.pytest_cache
 TASKS/COMPREHENSION/.pytest_cache
 TASKS/FUNCTION_EXERCISES/.pytest_cache
 TASKS/TESTS/TESTS_FUNCTIONS/.pytest_cache
+TASKS/LAMBDA/.pytest_cache
+TASKS/SETS/.pytest_cache
 
 # my training files py
 TASKS/CLASSES/СLASSES.py
