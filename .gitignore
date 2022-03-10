@@ -5,8 +5,16 @@ Studying
 Jupyter
 Tasks.py
 /.ipynb_checkpoints/COMPERHENSION-checkpoint.ipynb
+
+#tests cache
+.pytest_cache
 TASKS/.pytest_cache
 TASKS/TESTS/.pytest_cache
+TASKS/COMPREHENSION/.pytest_cache
+TASKS/FUNCTION_EXERCISES/.pytest_cache
+TASKS/TESTS/TESTS_FUNCTIONS/.pytest_cache
+
+# my training files py
 TASKS/CLASSES/СLASSES.py
 TASKS/COMPREHENSION/COMPREHENSION.py
 TASKS/FUNCTION_EXERCISES/TASK_EXERCISE_1.py
