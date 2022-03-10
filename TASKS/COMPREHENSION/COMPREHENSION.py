@@ -5,7 +5,7 @@ task1 = [-x for x in range(10)]
 TASK 2. Create comprehension with range(10).
 """
 
-task2 = []
+task2 = [x for x in range(10)]
 
 """
 TASK 3: Use x*2 in comprehension.
