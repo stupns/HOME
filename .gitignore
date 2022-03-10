@@ -6,6 +6,9 @@ Jupyter
 Tasks.py
 /.ipynb_checkpoints/COMPERHENSION-checkpoint.ipynb
 
+#idea
+.idea
+
 #tests cache
 .pytest_cache
 TASKS/.pytest_cache
