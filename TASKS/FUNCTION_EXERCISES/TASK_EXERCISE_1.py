@@ -13,7 +13,6 @@ import pytest
 even_num = []
 
 
-
 def chunk(nums, chunk_size):
     pass
 

@@ -35,7 +35,7 @@ task6 = []
 TASK 7: Find all of the numbers from 1–1000 that are divisible by 8.
 Use variable range(20).
 """
-nums7 = []
+nums7 = [x for x in range(20)]
 task7 = []
 
 """

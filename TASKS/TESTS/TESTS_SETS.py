@@ -48,40 +48,27 @@ def test_task10():
 
 
 def test_task11():
-    pass
+    assert task11_a == {"Red", "Green"}
+    assert task11_b == {"Green", "Red"}
 
 
 def test_task12():
-    pass
+    assert setc_12 == set()
 
 
 def test_task13():
-    pass
+    assert task13_a is False
+    assert task13_b == frozenset({1, 2})
+    assert task13 == frozenset({1, 2, 3, 4, 5, 6, 7})
 
 
 def test_task14():
-    pass
+    assert set_max == 20, set_min == 2
 
 
 def test_task15():
-    pass
+    assert set_len == 2
 
 
 def test_task16():
-    pass
-
-
-def test_task17():
-    pass
-
-
-def test_task18():
-    pass
-
-
-def test_task19():
-    pass
-
-
-def test_task20():
-    pass
+    assert task16 is True

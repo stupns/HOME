@@ -85,43 +85,45 @@ TASK 10: Write a Python program to check if a set is a subset of another set.
 """
 TASK 11: Write a Python program to create a shallow copy of sets.
 """
+setp_11 = {"Red", "Green"}
+setq_11 = {"Green", "Red"}
+# task11_a =
+# task11_b =
 
 """
 TASK 12: Write a Python program to remove all elements from a given set.
 """
-
+setc_12 = {"Red", "Green", "Black", "White"}
+# setc_12 =
 
 """
 TASK 13: Write a Python program to use of frozensets.
 Note: Frozensets behave just like sets except they are immutable
 """
+x_13 = frozenset([1, 2, 3, 4, 5])
+y_13 = frozenset([3, 4, 5, 6, 7])
+# task13_a =
+# task13_b =
+# task13 =
 
 """
 TASK 14: Write a Python program to find maximum and the minimum value in a set.
 """
+set14 = {5, 10, 3, 15, 2, 20}
+# set_max =
+# set_min =
 
 """
 TASK 15: Write a Python program to find the length of a set.
 """
+set15 = {5, 5, 5, 5, 5, 5, 7}
+# set_len =
 
 """
 TASK 16: Write a Python program to check if a given value is present in a set or not.
 """
+nums16 = {10, 20, 30, 40, 50}
+# task16 =
 
-"""
-TASK 17: Write a Python program to check if two given sets have no elements in common.
-"""
-
-"""
-TASK 18: Write a Python program to check if a given set is superset of itself and superset of another given set.
-"""
-
-"""
-TASK 19: Write a Python program to find the elements in a given set that are not in another set.
-"""
-
-"""
-TASK 20: Write a Python program to remove the intersection of a 2nd set from the 1st set.
-"""
 
 pytest.main(['-rpP', '..\\TESTS\\TESTS_SETS.py'])
