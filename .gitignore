@@ -10,6 +10,7 @@ Tasks.py
 .idea
 
 #tests cache
+*__pycache__
 .pytest_cache
 TASKS/.pytest_cache
 TASKS/TESTS/.pytest_cache
