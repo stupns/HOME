@@ -103,3 +103,8 @@ print(f'Popitem() : {example_dict}')
 # Update() method inserts the specified items to the dictionary.
 example_dict.update({'key3': None})
 print(f'Update() : {example_dict}')
+
+# Merge Two Dictionaries
+dict_merged = {**dict_for_filter_key, **dict_for_filter_value}
+dict_merged_2 = dict_for_filter_key | dict_for_filter_value
+print(f'Merged dicts : {dict_merged}, \nMerged using union operator: {dict_merged_2}')
