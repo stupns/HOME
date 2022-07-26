@@ -63,7 +63,11 @@ class Vehicle:
         self.mileage = mileage
         self.capacity = capacity
 
+    def __str__(self):
+        return f"{self.name}, {self.max_speed}, {self.mileage}, {self.capacity}"
+
     def seating_capacity(self, capacity):
+        self.capacity = capacity
         return f'The seating capacity of a {self.name} is {capacity} passengers.'
 
     def fare(self):
@@ -89,7 +93,7 @@ class Vehicle:
 
 class Bus(Vehicle):
     def seating_capacity(self, capacity=50):
-        return super().seating_capacity(capacity=50)
+        return super().seating_capacity(capacity)
 
     def fare(self):
         amount = super().fare()
@@ -115,6 +119,15 @@ class Driver:
         first_name, last_name = name.split()
         self.first_name = first_name
         self.last_name = last_name
+
+
+simple = Vehicle('Chevrolete', 220, 24, 120)
+second = Bus('Mers', 180, 40, 0)
+print(f'{simple}.\n func: {simple.seating_capacity(12)}\n',
+      f'{simple.fare()}.\n {simple}\n'
+      f'{second}.\n func: {second.seating_capacity()}\n',
+      f'{second.fare()}. {second}\n',
+      f'{second}')
 
 
 pytest.main()

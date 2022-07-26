@@ -1,4 +1,5 @@
 # Lists
+import copy
 
 myList = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 newList = ["ukraine", "iran", "USA"]
@@ -26,6 +27,10 @@ print(f'clear() : {result}')
 
 # copy() -> Returns a copy of the list
 newList = myList.copy()
+a = [123]
+b = [123,[12,34]]
+copy.deepcopy(a)
+
 print(f'copy() : {newList}')
 
 # count() -> method returns the number of elements with the specified value.

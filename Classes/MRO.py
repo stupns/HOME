@@ -17,13 +17,13 @@ class Y: ...
 class A(X, Y): ...
 class B(Y, X): ...
 
-class MyMRO(type):  # наследование type = это метакласс
-    def mro(cls):
-        return (cls, A, B, X, Y, object)  # явно задаем порядок!
-
-class G(A,B, metaclass=MyMRO):
-    ...
-print(G.mro())
+# class MyMRO(type):  # наследование type = это метакласс
+#     def mro(cls):
+#         return (cls, A, B, X, Y, object)  # явно задаем порядок!
+#
+# class G(A,B, metaclass=MyMRO):
+#     ...
+# print(G.mro())
 
 # ERROR
 # class X: ...

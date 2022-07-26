@@ -1,4 +1,4 @@
-last_name = ' Ser hii '
+last_name = ' Serhii '
 first_name = 'Stupnsss'
 txt = f'hello my name is {last_name} {first_name}'
 year_born = str(1996)
