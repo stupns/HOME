@@ -13,6 +13,7 @@ Tasks.py
 .pytest_cache
 TASKS/.pytest_cache
 TASKS/TESTS/.pytest_cache
+TASKS/TESTS/__pycache__
 TASKS/COMPREHENSION/.pytest_cache
 TASKS/FUNCTION_EXERCISES/.pytest_cache
 TASKS/TESTS/TESTS_FUNCTIONS/.pytest_cache
