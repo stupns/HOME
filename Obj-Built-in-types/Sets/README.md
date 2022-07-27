@@ -2,7 +2,11 @@ SETS
 ===============
 **Тип даних**: *mutable*.
 
-**Задачі**: [sets-tasks](https://github.com/stupns/HOME/blob/master/TASKS/SETS/SETS_READY.py "Sets tasks")
+**Задачі**: 
+
+- [sets-tasks](https://github.com/stupns/HOME/blob/master/TASKS/SETS/SETS_READY.py "Sets tasks")
+
+- [sets-Comprehension](https://github.com/stupns/HOME/blob/master/Comprehension/SetComprehension.py "Sets Comprehension")
 
 **Sets** — це невпорядкована сукупність елементів. Кожен елемент набору унікальний (без дублікатів) і повинен бути незмінним
 (не може бути змінений).
