@@ -27,7 +27,7 @@ class File:
         return False
 
 
-with File('../Dicts/Dicts.py', 'r') as f:
+with File('../Obj-Built-in-types/Dicts/Dicts.py', 'r') as f:
     print(int(next(f)))
 
 

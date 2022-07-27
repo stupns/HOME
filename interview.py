@@ -1,1 +1,0 @@
-print("Hello my name is {0}, i am {years} old".format('Foo'.capitalize(), '12'))
