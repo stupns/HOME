@@ -14,7 +14,7 @@ SETS
 
 ___
 
-#**<p align=center>Python Set Operations</p>**
+#<p align=center>Python Set Operations</p>
 
 Набори можна використовувати для виконання математичних операцій із наборами, таких як об’єднання, перетин, різниця та симетрична різниця. Ми можемо зробити це за допомогою операторів або методів.
 
@@ -27,7 +27,7 @@ ___
 
 ___
 
-##**Set Union**
+##Set Union
 
 ![sets-union](https://github.com/stupns/HOME/blob/master/images-git/set-union.webp)
 
@@ -54,7 +54,7 @@ B = {4, 5, 6, 7, 8}
 # Output: {1, 2, 3, 4, 5, 6, 7, 8}
 ```
 
-##**Set Intersection**
+##Set Intersection
 
 ![sets-intersection](https://github.com/stupns/HOME/blob/master/images-git/set-intersection.webp)
 
@@ -81,7 +81,7 @@ B = {4, 5, 6, 7, 8}
 # Output: {4, 5}
 ```
 
-##**Set Difference**
+##Set Difference
 
 ![sets-difference](https://github.com/stupns/HOME/blob/master/images-git/set-difference.webp)
 
@@ -115,7 +115,7 @@ B = {4, 5, 6, 7, 8}
 # Output: {8, 6, 7}
 ```
 
-##**Set Symmetric Difference**
+##Set Symmetric Difference
 
 ![set-symmetric-difference](https://github.com/stupns/HOME/blob/master/images-git/set-symmetric-difference.webp)
 
@@ -147,7 +147,7 @@ B = {4, 5, 6, 7, 8}
 
 ___
 
-#**Other Python Set Methods**
+#Other Python Set Methods
 
 Існує багато методів набору, деякі з яких ми вже використовували вище.
 Ось список усіх методів, які доступні для набору об’єктів:
@@ -173,7 +173,7 @@ ___
 | update()                      	|                           Оновлює набір об'єднанням себе та інших                          	|
 
 ___
-#**Built-in Functions with Set**
+#Built-in Functions with Set
 
 Вбудовані функції, такі як **all(), any(), enumerate(), len(), max(), min(), sorted(), sum()** тощо, зазвичай
 використовуються з наборами для виконання різних завдань.
@@ -191,7 +191,7 @@ ___
 
 ___
 
-#**Python Frozenset**
+#Python Frozenset
 
 **Frozenset** — це новий клас, який має характеристики набору, але його елементи не можна змінити після призначення.
 У той час як кортежі є незмінними списками, заморожені набори є незмінними наборами.
