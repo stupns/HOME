@@ -16,7 +16,7 @@ Each time an object is created a method is called. That methods is named the con
 The constructor is created with the function init. As parameter we write the self keyword, which refers to itself
 (the object). The process visually is:
 
-![constructor](https://github.com/stupns/HOME/blob/master/images-git/constructor.png)
+![constructor](https://github.com/stupns/HOME/blob/master/images-git/Constructor.png)
 
 Inside the constructor we initialize two variables: legs and arms. Sometimes variables are named properties in the 
 context of object oriented programming. We create one object (bob) and just by creating it, its variables are initialized.
