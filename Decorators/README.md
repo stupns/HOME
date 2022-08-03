@@ -19,3 +19,36 @@ However, as mentioned earlier in this post getters and setters are also used for
 attributes value. There is one more way to implement property function i.e. by using decorator. Python @property is one
 of the built-in decorators. The main purpose of any decorator is to change your class methods or attributes in such a 
 way so that the user of your class no need to make any change in their code.
+
+# **static**
+
+Static method can be called without creating an object or instance. Simply create the method and call it directly.
+This is in a sense orthogonal to object orientated programming: we call a method without creating objects.
+
+This runs directly against the concept of object-oriented programming and might be frowned upon, but at times it can be
+useful to have a static method.
+
+**Calling static methods**
+
+Normal class methods and static methods can be mixed (because why not?).
+This can get very confusing: we use both the concept of object orientation and functional programming mixed in one class.
+
+If you create an object, we can call non-static methods. But you can also call the static method without creating the object.
+
+```
+class Music:
+    @staticmethod
+    def play():
+        print("*playing music*")
+
+    def stop(self):
+        print("stop playing")
+
+Music.play()
+
+obj = Music()
+obj.stop()
+```
+
+Overall, static methods are an interesting concept to know, but in practice you’d rarely use them.
+Sometimes using static methods could be an indication of having a bad design.
