@@ -12,7 +12,7 @@ in python are often used when:
 - We use getters & setters to add validation logic around getting and setting a value.
 - To avoid direct access of a class field i.e. private variables cannot be accessed directly or modified by external user.
 
-# <p align=center>Using @property decorators to achieve getters and setters behaviour</p>
+**Using @property decorators to achieve getters and setters behaviour**
 
 In previous method we used property() function in order to achieve getters and setters behaviour.
 However, as mentioned earlier in this post getters and setters are also used for validating the getting and setting of
@@ -52,3 +52,30 @@ obj.stop()
 
 Overall, static methods are an interesting concept to know, but in practice you’d rarely use them.
 Sometimes using static methods could be an indication of having a bad design.
+
+# **classmethod**
+
+A class method is a method that’s shared among all objects. To call a class method, put the class as the first argument.
+
+Class methods can be called from instances and from the class itself. All of these use the same method.
+The method can use the classes variables and methods.
+
+- **Classmethod example**
+
+To turn a method into a classmethod, add @classmethod before the method definition. As parameter the method always takes the class.
+
+The example below defines a class method. The class method can then be used by the class itself. In this example the
+class method uses the class property name.
+
+``` 
+class Fruit:
+    name = 'Fruits'
+
+    @classmethod
+    def printName(cls):
+        print('The name is:', cls.name)
+
+Fruit.printName()
+```
+
+
