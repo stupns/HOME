@@ -3,27 +3,19 @@
 # Creating a base class
 class Base:
     def __init__(self):
-        # Protected member
-        self._a = 2
+        self._a = 2  # Protected member
 
 
 # Creating a derived class
 class Derived(Base):
     def __init__(self):
-        # Calling constructor of
-        # Base class
         Base.__init__(self)
-        print("Calling protected member of base class: ",
-              self._a)
-
-        # Modify the protected variable:
-        self._a = 3
-        print("Calling modified protected member outside class: ",
-              self._a)
+        print("Calling protected member of base class: ", self._a)
+        self._a = 3  # Modify the protected variable:
+        print("Calling modified protected member outside class: ", self._a)
 
 
 obj1 = Derived()
-
 obj2 = Base()
 
 # Calling protected member
@@ -33,11 +25,13 @@ print("Accessing protected member of obj1: ", obj1._a)
 # Accessing the protected variable outside
 print("Accessing protected member of obj2: ", obj2._a)
 
+print('\nStarted Class with private members:')
+
 
 # Python program to demonstrate private members
 # Creating a Base class
 
-print('\nStarted Class with private members:')
+
 class NewBase:
     def __init__(self):
         self.a = "Not private variable"
@@ -47,27 +41,19 @@ class NewBase:
 # Creating a derived class
 class Derived(NewBase):
     def __init__(self):
-        # Calling constructor of
-        # Base class
-        Base.__init__(self)
+        Base.__init__(self)  # Calling constructor of Base class
         print("Calling private member of base class: ")
         print(self.__c)
 
 
-# Driver code
 obj1 = NewBase()
 print(obj1.a)
 
+# Uncommenting print(obj1.c) will raise an AttributeError.
+# Uncommenting obj2 = Derived() will also raise an
+# AttributeError as private member of base class is called inside derived class
 
-# Uncommenting print(obj1.c) will
-# raise an AttributeError
-
-# Uncommenting obj2 = Derived() will
-# also raise an AtrributeError as
-# private member of base class
-# is called inside derived class
-
-# New examples
+# NEW EXAMPLES
 print('\nDiff example:')
 
 

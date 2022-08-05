@@ -28,7 +28,7 @@ OOP
 PRINCIPLES OOP
 ===============
 
-#*Inheritance*
+# *Inheritance*
 
 **Inheritance**: A class can get the properties and variables of another class. This class is called the super class or parent class.
 
@@ -104,3 +104,54 @@ p1.__name  # will give AttributeError
 You can still access the private members outside the class. Python performs name mangling, so every member prefixed
 with **__** is changed to **_class__member**. So, accessing name will then be **p1._Person__name**. 
 However, this is highly unadvised.
+
+# *Abstraction*
+
+Abstraction in python is defined as hiding the implementation of logic from the client and using the particular
+application. And the most important key feature of Object-Oriented Programming. It hides the irrelevant data specified
+in the project, reducing complexity and giving value to the efficiency. Abstraction is made in Python using Abstract
+classes and their methods in the code.
+
+**Syntax:**
+
+_Abstract class Syntax is declared as_
+```
+from abc import ABC
+// declaration
+Class classname(ABC);
+```
+_Abstract method Syntax is declared as_
+```
+Def abstractmethod name():
+Pass
+```
+
+**How does Abstraction work in Python?**
+
+As the primary role of the Abstraction is to hide the internal functioning of the code, and the interactions are made
+with the users through the basic implementation. In other words, the user knows what he is doing, not how the works are
+done behind. So let’s go deeper into the topic to find its importance.
+
+In Python, Abstraction works by incorporating abstract classes and methods.
+
+**Abstract Class:** A class specified in the code that has abstract methods is named Abstract Class.
+
+**Abstract Method:** Here, it doesn't have any implementation. All the implementations are done inside the sub-classes.
+
+Python makes use of a self-variable in method definitions and in initializing a variable. In python, a class method
+gives information about the class. To define an instant method, this method should declare self as a parameter.
+
+**Declared abstract class:**
+
+```
+from abc import ABC
+class abs_class(ABC):
+    def method(self):  #normal method
+        pass
+        
+    @abstractmethod
+    def Abs_method(self):  #method definition
+        #Abs_method definition
+        pass
+```
+
