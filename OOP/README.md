@@ -28,7 +28,9 @@ OOP
 PRINCIPLES OOP
 ===============
 
-# *Inheritance*
+# *[Inheritance](https://github.com/stupns/HOME/blob/master/OOP/Classes/%D0%A1lasses.py)*
+**Задачі**: [Classes-tasks.](https://github.com/stupns/HOME/tree/master/TASKS/CLASSES "Classes tasks")
+
 
 **Inheritance**: A class can get the properties and variables of another class. This class is called the super class or parent class.
 
@@ -50,13 +52,13 @@ Hierarchical level inheritance enables more than one derived class to inherit pr
 **Multiple Inheritance:**
 Multiple level inheritance enables one derived class to inherit properties from more than one base class.
 
-# *Polymorphism*
+# *[Polymorphism](https://github.com/stupns/HOME/blob/master/OOP/Polymorphism.py)*
 
 Polymorphism simply means having many forms. It refers to the use of a single type entity (method, operator or object)
 to represent different types in different scenarios.For example, we need to determine if the given species of birds fly or not,
 using polymorphism we can do this using a single function.
 
-# *Encapsulation*
+# *[Encapsulation](https://github.com/stupns/HOME/blob/master/OOP/Encapsulation.py)*
 Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of wrapping
 data and the methods that work on data within one unit. This puts restrictions on accessing variables and methods
 directly and can prevent the accidental modification of data. To prevent accidental change, an object’s variable
@@ -105,7 +107,7 @@ You can still access the private members outside the class. Python performs name
 with **__** is changed to **_class__member**. So, accessing name will then be **p1._Person__name**. 
 However, this is highly unadvised.
 
-# *Abstraction*
+# *[Abstraction](https://github.com/stupns/HOME/blob/master/OOP/Abstraction.py)*
 
 Abstraction in python is defined as hiding the implementation of logic from the client and using the particular
 application. And the most important key feature of Object-Oriented Programming. It hides the irrelevant data specified
@@ -155,3 +157,105 @@ class abs_class(ABC):
         pass
 ```
 
+[MRO](https://github.com/stupns/HOME/blob/master/OOP/MRO.py) (Method resolution order)
+===============
+
+**Method Resolution Order(MRO)** it denotes the way a programming language resolves a method or attribute.
+Python supports classes inheriting from other classes. The class being inherited is called the Parent or Superclass,
+while the class that inherits is called the Child or Subclass. In python, method resolution order defines the order
+in which the base classes are searched when executing a method. First, the method or attribute is searched within a
+class, and then it follows the order we specified while inheriting. This order is also called Linearization of a class
+and set of rules are called MRO(Method Resolution Order).While inheriting from another class, the interpreter needs a
+way to resolve the methods that are being called via an instance.Thus, we need the method resolution order. 
+
+In the above example we use multiple inheritances, and it is also called **Diamond inheritance**, and it looks as follows: 
+![mro](https://github.com/stupns/HOME/blob/master/images-git/mro.png)
+
+Python follows a depth-first lookup order and hence ends up calling the method from class A. By following the method
+resolution order, the lookup order as follows. 
+Class D -> Class B -> Class C -> Class A 
+Python follows depth-first order to resolve the methods and attributes. So in the above example,
+it executes the method in class B. 
+
+```
+class A:
+    def rk(self):
+        print(" In class A")
+class B(A):
+    def rk(self):
+        print(" In class B")
+ 
+r = B()
+r.rk()
+```
+**Output:** 
+
+  `In class B`
+  
+**Old and New Style Order :** 
+
+In the older version of Python(2.1) we are bound to use old-style classes but in Python(3.x & 2.2) we are bound to use
+only new classes. New style classes are the ones whose first parent inherits from Python root ‘object’ class.
+
+```
+# Old style class
+class OldStyleClass:
+    pass
+ 
+# New style class
+class NewStyleClass(object):
+    pass
+```
+
+Method resolution order(MRO) in both the declaration style is different.
+Old style classes use **DLR or depth-first left to right algorithm** whereas new style classes use **C3 Linearization algorithm**
+for method resolution while doing multiple inheritances. 
+
+**C3 Linearization Algorithm :** 
+
+C3 Linearization algorithm is an algorithm that uses new-style classes. It is used to remove an inconsistency created by DLR Algorithm. It has certain limitation they are: 
+ 
+
+- Children precede their parents
+- If a class inherits from multiple classes, they are kept in the order specified in the tuple of the base class.
+
+C3 Linearization Algorithm works on three rules: 
+ 
+
+- Inheritance graph determines the structure of method resolution order.
+- User have to visit the super class only after the method of the local classes are visited.
+- Monotonicity
+
+**Methods for Method Resolution Order(MRO) of a class:** 
+To get the method resolution order of a class we can use either __mro__ attribute or mro() method.
+By using these methods we can display the order in which methods are resolved.
+For Example 
+
+```
+class A:
+    def rk(self):
+        print(" In class A")
+class B:
+    def rk(self):
+        print(" In class B")
+ 
+# classes ordering
+class C(A, B):
+    def __init__(self):
+        print("Constructor C")
+ 
+r = C()
+ 
+# it prints the lookup order
+print(C.__mro__)
+print(C.mro())
+```
+
+**Output:**
+```
+Constructor C
+
+(<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>)
+
+[<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>]
+```
