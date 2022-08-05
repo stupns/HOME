@@ -1,20 +1,17 @@
-class my_class(object):
-    pass
-class A(my_class):
-    pass
-class B(my_class):
-    pass
-class C(my_class):
-    pass
+class MyClass(object):  ...
+class A(MyClass):  ...
+class B(MyClass):  ...
+class C(MyClass):  ...
 
-#Here are the names of the subclasses:
-print([cls.__name__ for cls in my_class.__subclasses__()])
 
-#Here are the subclasses themselves:
-print(my_class.__subclasses__())
+# Here are the names of the subclasses:
+print([cls.__name__ for cls in MyClass.__subclasses__()])
 
-#Confirmation that my_class is the base class:
-for cls in my_class.__subclasses__():
+# Here are the subclasses themselves:
+print(MyClass.__subclasses__())
+
+# Confirmation that my_class is the base class:
+for cls in MyClass.__subclasses__():
     print(cls.__base__)
 
 
@@ -27,5 +24,5 @@ def get_all_subclasses(cls):
     return all_subclasses
 
 
-# pass base class as argument
-print(get_all_subclasses(my_class))
+# Pass base class as argument
+print(get_all_subclasses(MyClass))

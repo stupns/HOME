@@ -1,6 +1,5 @@
-# create class dog
+# Create class Dog
 class Dog:
-
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -12,12 +11,8 @@ class Dog:
         print(f'{self.name} rolled over!')
 
 
-my_dog = Dog('Harry', 3)
-print(f'My dog`s name is {my_dog.name} and he`s {my_dog.age} years old.')
-my_dog.sit()
-
-
-# create class Cars
+# 2 EXAMPLE
+# Create class Cars
 class Car:
     def __init__(self, make, model, year):
         self.make = make
@@ -27,7 +22,7 @@ class Car:
 
     def get_descriptive_name(self):
         long_name = f'{self.year} {self.make} {self.model}'
-        return long_name.title()
+        print(long_name.title())
 
     def read_odometer(self):
         print(f'This car has {self.odometer_reading} miles on it.')
@@ -45,26 +40,7 @@ class Car:
         pass
 
 
-my_old_car = Car('subary', 'outback', 2004)
-print(f'My old car: {my_old_car.get_descriptive_name()}')
-my_old_car.update_odometer(20000)
-my_old_car.read_odometer()
-my_old_car.increment_odometr(5000)
-my_old_car.read_odometer()
-
-print('\n')
-my_new_car = Car('audi', 'a4', 2019)
-print(my_new_car.get_descriptive_name())
-my_new_car.read_odometer()
-my_new_car.increment_odometr(10000)
-# my_new_car.odometer_reading = 32   first method change value attribute classes
-my_new_car.read_odometer()
-print('\n')
-
-
-# Успадкування
-
-
+# Inheritance
 class Battery:
     def __init__(self, battery_size=75):
         self.battery_size = battery_size
@@ -90,8 +66,25 @@ class ElectricCar(Car):
         print(f'This car doesn`t need a gas tank')
 
 
-myTeslaCar = ElectricCar('tesla', 'model S', '2020')
-print(myTeslaCar.get_descriptive_name())
-myTeslaCar.battery.describe_battery()
-myTeslaCar.fill_gas_tank()
-myTeslaCar.battery.get_range()
+if __name__ == "__main__":
+    my_dog = Dog('Harry', 3)
+    print(f'My dog`s name is {my_dog.name} and he`s {my_dog.age} years old.')
+    my_dog.sit()
+
+    # 2 EXAMPLE
+    print('\n2 EXAMPLE:')
+    my_new_car = Car('audi', 'a4', 2019)
+    my_new_car.get_descriptive_name()
+    my_new_car.read_odometer()
+    my_new_car.increment_odometr(10000)
+    my_new_car.odometer_reading = 32  # first method change value attribute classes
+    my_new_car.read_odometer()
+    print('\n')
+
+    # Update class Battery
+
+    myTeslaCar = ElectricCar('tesla', 'model S', '2020')
+    myTeslaCar.get_descriptive_name()
+    myTeslaCar.battery.describe_battery()
+    myTeslaCar.fill_gas_tank()
+    myTeslaCar.battery.get_range()
