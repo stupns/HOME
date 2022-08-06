@@ -92,7 +92,7 @@ A class method is a method that’s shared among all objects. To call a class me
 Class methods can be called from instances and from the class itself. All of these use the same method.
 The method can use the classes variables and methods.
 
-- **Classmethod example:**
+**Calling classmethod`s**
 
 To turn a method into a classmethod, add @classmethod before the method definition. As parameter the method always takes the class.
 
