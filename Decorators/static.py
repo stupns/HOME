@@ -4,9 +4,7 @@ class Static:
         print("*playing music*")
 
 
-Static.play()
-
-
+# Example 2
 class InsideStatic:
     @staticmethod
     def play():
@@ -16,10 +14,7 @@ class InsideStatic:
         print("stop playing")
 
 
-InsideStatic.play()
-# InsideStatic.stop()
-
-
+# Example 3
 class CallStatic:
     @staticmethod
     def play():
@@ -29,7 +24,13 @@ class CallStatic:
         print("stop playing")
 
 
-CallStatic.play()
+if __name__ == "__main__":
+    Static.play()
+    print('\nExample 2:')
 
-obj = CallStatic()
-obj.stop()
+    InsideStatic.play()
+    # InsideStatic.stop()
+    print('\nExample 3:')
+
+    CallStatic.play()
+    CallStatic().stop()
