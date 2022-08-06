@@ -34,7 +34,7 @@ def cities(city_one, city_two):
     print("Cities I love are {0} and {1}".format(city_one, city_two))
 ```
 
-# **property**
+# [**property**](https://github.com/stupns/HOME/blob/master/Decorators/property.py)
 
 In Python, getters and setters are not the same as those in other object-oriented programming languages.
 Basically, the main purpose of using getters and setters in object-oriented programs is to ensure data encapsulation.
@@ -52,7 +52,7 @@ attributes value. There is one more way to implement property function i.e. by u
 of the built-in decorators. The main purpose of any decorator is to change your class methods or attributes in such a 
 way so that the user of your class no need to make any change in their code.
 
-# **static**
+# [**static**](https://github.com/stupns/HOME/blob/master/Decorators/static.py)
 
 Static method can be called without creating an object or instance. Simply create the method and call it directly.
 This is in a sense orthogonal to object orientated programming: we call a method without creating objects.
@@ -85,7 +85,7 @@ obj.stop()
 Overall, static methods are an interesting concept to know, but in practice you’d rarely use them.
 Sometimes using static methods could be an indication of having a bad design.
 
-# **classmethod**
+# [**classmethod**](https://github.com/stupns/HOME/blob/master/Decorators/classmethod.py)
 
 A class method is a method that’s shared among all objects. To call a class method, put the class as the first argument.
 
