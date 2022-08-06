@@ -32,6 +32,7 @@ print('\nStarted Class with private members:')
 # Creating a Base class
 
 
+# 2. Example 2
 class NewBase:
     def __init__(self):
         self.a = "Not private variable"
@@ -53,8 +54,8 @@ print(obj1.a)
 # Uncommenting obj2 = Derived() will also raise an
 # AttributeError as private member of base class is called inside derived class
 
-# NEW EXAMPLES
-print('\nDiff example:')
+# 3. Example 3
+print('\nExample 3:')
 
 
 class Person:
@@ -69,3 +70,28 @@ p1 = Person("John", 20, 170)
 print(f'public: {p1.name}')  # public: can be accessed
 print(f'protected: {p1._age}')  # protected: can be accessed but not advised
 # print(p1.__height)  # private: will give AttributeError
+
+# 4. Example 4
+print('\nExample 4:')
+
+
+class Phone:
+    username = "Kate"                # public variable
+    __serial_number = "11.22.33"     # private variable
+    __how_many_times_turned_on = 0   # private variable
+
+    def call(self):                  # public method
+        print("Ring-ring!")
+
+    def __turn_on(self):        # private method
+        self.__how_many_times_turned_on += 1
+        print("Times was turned on: ", self.__how_many_times_turned_on)
+
+
+my_phone = Phone()
+
+# my_phone.__turn_on() # - not working
+my_phone._Phone__turn_on()
+print(f"Correct serial number is {my_phone._Phone__serial_number}")
+my_phone._Phone__serial_number = "33.22.11"
+print(f"New serial number is {my_phone._Phone__serial_number}")

@@ -6,7 +6,6 @@ class Phone:
     def call(self):                  # public method
         print("Ring-ring!" )
 
-    @staticmethod
     def __turn_on(self):             # private method
         self.__how_many_times_turned_on += 1
         print("Times was turned on: ", self.__how_many_times_turned_on )
