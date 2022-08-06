@@ -1,7 +1,3 @@
-
-
-
-
 def fictive(decorator_text):
     def decorator_func(func):
         print('Input in decorator')

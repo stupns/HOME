@@ -1,5 +1,5 @@
 def decorator_with_arguments(function_to_decorate):
-    def wrapper_accepting_arguments(arg1, arg2):  # аргументы прибывают отсюда
+    def wrapper_accepting_arguments(arg1, arg2):  # arguments come from here
         print(f'Show, my arguments:{arg1, arg2}')
         function_to_decorate(arg1, arg2)
     return wrapper_accepting_arguments
@@ -10,16 +10,14 @@ def print_full_name(first_name, last_name):
     print(f'My name is {first_name} {last_name}')
 
 
-print_full_name('Serhii', 'Stupnytskyi')
-
-
-#Декорування методів
-
+# Decorating methods
 def method_friendly_decorator(method_to_decorate):
     def wrapper(self, lie):
         lie -= 3
         return method_to_decorate(self, lie)
+
     return wrapper
+
 
 class Lucy:
     def __init__(self):
@@ -29,5 +27,9 @@ class Lucy:
     def sayYourAge(self, lie):
         print(f'My age is {self.age + lie}')
 
-l = Lucy()
-l.sayYourAge(5)
+
+if __name__ == "__main__":
+    print_full_name('Serhii', 'Stupnytskyi')
+
+    lucy = Lucy()
+    lucy.sayYourAge(5)
