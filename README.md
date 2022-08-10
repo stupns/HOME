@@ -54,7 +54,7 @@ ___
 - [Dict comprehension](https://github.com/stupns/HOME/blob/master/Comprehension/DictComprehension.py)
 - [Set comprehension](https://github.com/stupns/HOME/blob/master/Comprehension/SetComprehension.py)
 
-##[TASKS](https://github.com/stupns/HOME/tree/master/TASKS)
+## [TASKS](https://github.com/stupns/HOME/tree/master/TASKS)
 
 ___
 You need download tests files from **_[tests](https://github.com/stupns/HOME/tree/master/TASKS/TESTS)_** folder for run tests.
