@@ -8,7 +8,7 @@
 
 ## Home open-source codebase and curriculum
 
-This repository created of me that will help beginners for python.
+This repository created by me that will help beginners for python.
 
 ### License
 
