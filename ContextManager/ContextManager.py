@@ -183,21 +183,3 @@ with urlopen('http://www.google.com') as response:
     body = response.read()
     print(response.headers.get_content_charset())
 
-print('\n6. ')
-
-
-# 6. Function based Context Manager
-
-@contextmanager
-def hello_name(name):
-    try:
-        print('What is your name?')
-        yield name
-    except:
-        print('Error')
-    finally:
-        print('Goodbye', name)
-
-
-with hello_name('David') as my_name:
-    print(f'Run yield var: {my_name}')
