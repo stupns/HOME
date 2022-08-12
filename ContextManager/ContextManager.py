@@ -1,4 +1,5 @@
 import sqlite3
+import os
 from contextlib import contextmanager
 from urllib.request import urlopen
 
@@ -7,7 +8,9 @@ with open(path, 'w') as f_obj:
     f_obj.write(some_data)
 '''
 
-# 0. Classic File create contextmanager using magic method
+
+# 0. Classic Class create contextmanager using magic method
+
 
 class File:
     def __init__(self, filename, mode):
@@ -24,14 +27,20 @@ class File:
         if not self.__file.closed:
             self.__file.close()
 
-        return False
+        return True
 
 
 with File('../Obj-Built-in-types/Dicts/Dicts.py', 'r') as f:
-    print(int(next(f)))
+    new = f.readlines()
+    not_words = [" ", "", ","]
+    simple_con = [word for sentence in new for word in sentence.split(' ') if word not in not_words]
+    words_dict = [x for x in simple_con if 'dict' in x]
+
+print('1. ')
 
 
-# 1. Classic Class create contextmanager using magic method
+# 1. The same Class create contextmanager using magic method
+
 
 class Resource:
     def __init__(self, name):
@@ -45,7 +54,6 @@ class Resource:
         print('Resource: close')
 
 
-# create contextmanager
 class ResourceForWith:
     def __init__(self, name):
         self.__resource = Resource(name)
@@ -69,59 +77,127 @@ with ResourceForWith('Worker') as r:
 6. Викликається  метод __exit__, який закриває файл з виводом повідомлення з методу post_work.
 """
 
-# # 2. Classic Class create contextmanager using magic method for DB connection
-# class DataConn:
-#
-#     def __init__(self, db_name):
-#         self.db_name = db_name
-#
-#     def __enter__(self):
-#         self.conn = sqlite3.connect(self.db_name)
-#         return self.conn
-#
-#     def __exit__(self, exc_type, exc_val, exc_tb):
-#         self.conn.close()
-#         if exc_val:
-#             raise
-#
-#
-# if __name__ == '__main__':
-#     db = 'test.db'
-#
-#     with DataConn(db) as conn:
-#         cursor = conn.cursor()
-#
-# #create decorator_______________________________________________
-#
-# @contextmanager
-# def file_open(path):
-#     try:
-#         f_obj = open(path, 'w')
-#         yield f_obj
-#     except OSError:
-#         print("We had an error!")
-#     finally:
-#         print('Closing file')
-#         f_obj.close()
-#
-#
-# if __name__ == '__main__':
-#     with file_open('test.txt') as fobj:
-#         fobj.write('Testing context managers')
-#
-#
-# # close
-# @contextmanager
-# def closing(db):
-#     try:
-#         yield db.conn()
-#     finally:
-#         db.close()
-#
-#
-# # close 2 method
-#
-# with closing(urlopen('http://www.google.com')) as webpage:
-#     for line in webpage:
-#         # обрабатываем строку...
-#         pass
+print('\n2. ')
+
+
+# 2. Classic Class create contextmanager using magic method for DB connection
+
+
+class DataConn:
+
+    def __init__(self, db_name):
+        self.db_name = db_name
+
+    def __enter__(self):
+        self.conn = sqlite3.connect(self.db_name)
+        return self.conn
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.conn.close()
+        if exc_val:
+            raise
+
+
+db = 'test.db'
+cars = (
+    (1, 'Audi', 52642),
+    (2, 'Mercedes', 57127),
+    (3, 'Skoda', 9000),
+    (4, 'Volvo', 29000),
+    (5, 'Bentley', 350000),
+    (6, 'Hummer', 41400),
+    (7, 'Volkswagen', 21600)
+)
+
+if os.path.exists('test.db'):
+    with DataConn(db) as conn:
+        cursor = conn.cursor()
+        cursor.execute('SELECT SQLITE_VERSION()')
+        data = cursor.fetchone()[0]
+        print(f"SQLite version: {data}")
+        cursor.execute("DROP TABLE IF EXISTS cars;")
+        cursor.execute("CREATE TABLE cars(id INT, name TEXT, price INT)")
+        cursor.executemany("INSERT INTO cars VALUES(?, ?, ?)", cars)
+        cursor.execute("SELECT * FROM cars")
+        while True:
+            rows = cursor.fetchall()
+            if rows is None:
+                break
+            for row in rows:
+                print(f'{row[0]} {row[1]} {row[2]}')
+            break
+
+print('\n3. ')
+
+
+# 3. Using @contextmanager for create and write file
+
+@contextmanager
+def file_open(path):
+    try:
+        f_obj = open(path, 'a')
+        yield f_obj
+    except OSError:
+        print('We had an error!')
+    finally:
+        print('Closing file')
+
+
+if not os.path.exists('test.txt'):
+    with open('test.txt', mode='w') as f:
+        print('Write first line.')
+        f.write('This text is written in python\n')
+else:
+    with file_open('test.txt') as f:
+        print('Write next line in txt.file')
+        f.write('Testing context managers\n')
+
+print('\n4. ')
+
+
+# 4. Connect and Close DB
+
+@contextmanager
+def closing(db):
+    try:
+        query = "SELECT SQLITE_VERSION()"
+        db_obj = sqlite3.connect(db)
+        cursor = db_obj.cursor()
+        cursor.execute(query)
+        data = cursor.fetchone()[0]
+        print(f"SQLite version: {data}")
+        yield db_obj
+    finally:
+        print(f'Closed')
+
+
+db = 'test.db'
+if os.path.exists('test.db'):
+    with closing(db) as conn:
+        print('Checking work')
+
+print('\n5. ')
+# 5. Read urls using contextmanager
+
+with urlopen('http://www.google.com') as response:
+    body = response.read()
+    print(response.headers.get_content_charset())
+
+print('\n6. ')
+
+
+# 6. Function based Context Manager
+
+@contextmanager
+def hello_name(name):
+    try:
+        print('What is your name?')
+        yield name
+    except:
+        print('Error')
+    finally:
+        print('Goodbye', name)
+
+
+with hello_name('David') as my_name:
+    print(f'Run yield var: {my_name}')

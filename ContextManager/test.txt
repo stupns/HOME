@@ -1,0 +1,7 @@
+This text is written in python
+Testing context managers
+Testing context managers
+Testing context managers
+Testing context managers
+Testing context managers
+Testing context managers
