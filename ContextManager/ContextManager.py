@@ -182,4 +182,3 @@ print('\n5. ')
 with urlopen('http://www.google.com') as response:
     body = response.read()
     print(response.headers.get_content_charset())
-
