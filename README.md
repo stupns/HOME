@@ -54,6 +54,23 @@ ___
 - [Dict comprehension](https://github.com/stupns/HOME/blob/master/Comprehension/DictComprehension.py)
 - [Set comprehension](https://github.com/stupns/HOME/blob/master/Comprehension/SetComprehension.py)
 
+### [5. Functions](https://github.com/stupns/HOME/tree/master/Functions)
+
+___
+
+- [Function](https://github.com/stupns/HOME/blob/master/Functions/Function.py)
+- [Lambda](https://github.com/stupns/HOME/blob/master/Functions/Lambda.py)
+- [Loops](https://github.com/stupns/HOME/blob/master/Functions/Loops.py)
+- [Map(), Filter(), Reduce(), Zip()](https://github.com/stupns/HOME/blob/master/Functions/Map_Filter_Reduce_Zip.py)
+- [Namespaces](https://github.com/stupns/HOME/blob/master/Functions/Namespaces.py)
+
+### [6. Advanced](https://github.com/stupns/HOME/tree/master/Advanced)
+
+___
+
+- [Async](https://github.com/stupns/HOME/tree/master/Advanced/Async)
+- [Requests](https://github.com/stupns/HOME/tree/master/Advanced/Requests)
+
 ## [TASKS](https://github.com/stupns/HOME/tree/master/TASKS)
 
 You need download tests files from **_[tests](https://github.com/stupns/HOME/tree/master/TASKS/TESTS)_** folder for run
