@@ -1,6 +1,4 @@
-# MAP()
-import re
-
+# *************MAP()**************
 print('Maps():')
 numbers = [2, 4, 6, 8, 10]
 
@@ -38,6 +36,8 @@ text = """Some people, when confronted with a problem, think
 I know, I'll use regular expressions.
 Now they have two problems. Jamie Zawinski"""
 
+import re
+
 
 def remove_punctuation(word):
     return re.sub(r'[!?.:;,"()-]', "", word)
@@ -46,6 +46,7 @@ def remove_punctuation(word):
 result = list(map(remove_punctuation, text.split()))
 print(f'\nExample 5: \n{result}')
 
+# *************FILTER()**************
 print('\nFilter():')
 
 numbers = [-2, -1, 0, 1, 2]
@@ -79,6 +80,7 @@ def is_palindrom(word):
 result = list(filter(is_palindrom, words))
 print(f'\nExample 5: \n{result}')
 
+# ***********REDUCE()***********
 print('\nReduce():\n')
 
 from functools import reduce
@@ -107,9 +109,11 @@ numbers = [1, 2, 3, 4]
 result = reduce(lambda a, b: a * b, numbers)
 print(f'\nExample 4: \n{result}')
 
+
 # Example 5:
 def my_min_func(a, b):
     return a if a < b else b
+
 
 def my_max_func(a, b):
     return a if a > b else b
@@ -127,6 +131,7 @@ print(f'\nExample 5: \n'
       f'my_min_func: {a}\nmy_max_func: {b},'
       f'\nmin_lambda: {c}\nmax_lambda: {d},'
       f'\nmin(): {e}\nmax(): {f}')
+
 
 # Example 6: func
 def both_true(a, b):
@@ -147,8 +152,8 @@ lambda_1 = reduce(lambda a, b: bool(a or b), [0, 0, 1, 1, 0])
 lambda_0 = reduce(lambda a, b: bool(a or b), [0, 0, 0, 0, 0])
 lambda_empty = reduce(lambda a, b: bool(a or b), [], False)
 print(f'\nExample 7: lambda \n'
-      f'[1, 1, 1, 1, 1] : {lambda_1}\n'
-      f'[1, 1, 1, 1, 0] : {lambda_0}\n'
+      f'[0, 0, 1, 1, 0] : {lambda_1}\n'
+      f'[0, 0, 0, 0, 0] : {lambda_0}\n'
       f'[] : {lambda_empty}')
 
 # Example 8: Any():

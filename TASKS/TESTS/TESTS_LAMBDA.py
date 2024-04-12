@@ -1,4 +1,4 @@
-from TASKS.LAMBDA.LAMBDA import *
+from TASKS.LAMBDA.LAMBDA_READY import *
 
 
 def test_task1():

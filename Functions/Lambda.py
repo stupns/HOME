@@ -12,9 +12,8 @@ def cube(y):
 
 
 (lambda y: print(y * y * y))(5)
+# print(f'\nExample 3:\n\n{cube(5)}')  # using the normally defined function
 
-print(f'\nExample 3:\n\n{cube(5)}')  # using the normally defined function
-# print(lambda_cube(5))  # using the lambda function
 
 # Example 4 : showing difference between def() and lambda().
 print(f'\nExample 4:\n')

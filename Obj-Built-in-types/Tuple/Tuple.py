@@ -1,3 +1,4 @@
+# region Condition
 # 1. Init tuple
 
 a = ()  # Empty tuple
@@ -6,37 +7,42 @@ c = ('world', (2.88, "abc"))  # nested tuple
 d = 5, 'Hello', True  # same tuple as b
 e = (3.88,)  # A tuple is strictly one element
 print(f'id c = (`world`, (2.88, "abc"): {id(c)}')
+# endregion
 
-# 2. Operation tuple()
-
+# region 2. Operation tuple()
 word = 'hello'  # ('H', 'e', 'l', 'l', 'o')
 example_var = tuple((3, 2, 0, -5))   # (3, 2, 0, -5)
+# endregion
 
-# 3. Operation T[i]
+# region 3. Operation T[i]
 a_el = ('a', 'bc', 'def', 'gin')
 item_2 = a_el[2]  # item_2 = 'def'
+# endregion\\\\\\\\\\\\\\sazxc
 
-# 3.1 A tuple containing another tuple and its elements
+# region 3.1 A tuple containing another tuple and its elements
 b_el = (a_el, a_el[1], True)  # (('a', 'bc', 'def', 'gin'), 'bc', True)
 item_0 = b_el[0]  # item_0 = ('a', 'bc', 'def', 'gin')
 item_1 = b_el[1]  # item_1 = 'bc'
+# endregion
 
-# 3.2 A tuple containing a list
+# region 3.2 A tuple containing a list
 c = (1, [2, 3, 4], "text")
 
-# 3.2.1 Extract a list from a tuple
+# Extract a list from a tuple
 item_3 = c[1]  # item_3 = [2, 3, 4], с = (1, [2, 3, 4], 'text')
+# endregion
 
-# 3.2. The list in the tuple is mutable, so it can be changed
+# region 3.2. The list in the tuple is mutable, so it can be changed
 c[1][1] = 8  # с = (1, [2, 8, 4], 'text')
+# endregion
 
-# 4. Concatenation
-
+# region 4. Concatenation
 A = (1, 2, 3)
 B = (4, 5, 6)
 C = A + B  # C = (1, 2, 3, 4, 5, 6)
+# endregion
 
-# 5. Cycle a tuple in a loop
+# region 5. Cycle a tuple in a loop
 
 a_new = ("abc", "abed", "bcd", "cde")
 
@@ -50,8 +56,9 @@ abed
 bcd
 cde
 """
+# endregion
 
-# 6. Cycle while
+# region 6. Cycle while
 # The output tuple - integers
 A_int = (-1, 3, -8, 12, -20)
 
@@ -66,19 +73,21 @@ while i < len(A_int):
 
 # Output result
 print("k = ", k)  # k = 3
+# endregion
 
-# 6.1 Cycle for in a loop
+# region 6.1 Cycle for in a loop
 # Given a tuple containing strings
 A_chr = ("abc", "ad", "bcd")
 
-# 6.2 Form a new list from the elements of tuple A, in the new list B, each element
+# Form a new list from the elements of tuple A, in the new list B, each element
 # is doubled
 B_chr = [item * 2 for item in A_chr]
 
 print("A = ", A_chr)
 print("B = ", B_chr)
+# endregion
 
-# 7. Method index() in tuple
+# region 7. Method index() in tuple
 
 # The index method - determines the position (index) of the element in the tuple
 A_week = ("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
@@ -93,3 +102,4 @@ if day in A_week:  # checking whether the string day is in the tuple A
 else:
     num = -1
     print("Wrong day.")
+# endregion

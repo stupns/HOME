@@ -58,8 +58,19 @@ myList = ['a', 'b', 'c', 'd', 'e']
 newList = ['f', 'g', 'h']
 print(f'14. {[x for y in [myList, newList] for x in y]}')
 
-# 15 List comprehension list all the students born before the year 2000
+# 15. List comprehension list all the students born before the year 2000
 dict_two = [('Dana Hausman', 1996), ('Corrine Haley', 1998), ('Huan Xin (Winnie) Cai', 1997),
             ('Greg Willits', 2001), ('Michael Lyda', 1995), ('Aidana Utepkaliyeva', 2000),
             ]
 print(f'15 {[car for (car, year) in dict_two if year < 2000]}')
+
+# 16. Deque:
+
+from collections import deque
+# Припустимо, нам потрібно знайти кількість чисел, більших за 5
+d = deque([1, 6, 3, 8, 4, 7, 2, 6])
+
+# Використання генератора списку і функції len для підрахунку
+count_greater_than_5 = sum(1 for item in d if item > 5)
+count_greater_than_6 = sum(i for i in d if i > 5)
+print(f"Кількість чисел більших за 5: {count_greater_than_6}")

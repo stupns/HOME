@@ -1,5 +1,7 @@
 import pytest
 
+from settings import test_path
+
 """
 TASK 1: Write a Python program to create a set.
 Variables: 
@@ -142,4 +144,4 @@ nums16 = {10, 20, 30, 40, 50}
 task16 = nums16.issuperset(nums16)
 
 
-pytest.main(['-rpP', '..\\TESTS\\TESTS_SETS.py'])
+pytest.main(['-rpP', test_path.TEST_SETS])

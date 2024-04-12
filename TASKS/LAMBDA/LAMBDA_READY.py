@@ -7,6 +7,8 @@ Sample Output:
 """
 import pytest
 
+from settings import test_path
+
 task1 = lambda x: x + 15
 task1_1 = lambda x, y: x * y
 
@@ -340,4 +342,5 @@ def max_val(list_val):
 
 
 # ___________________________________________________TESTS
-pytest.main(['-rpP', '..\\TESTS\\TESTS_LAMBDA.py'])
+pytest.main(['-rpP', test_path.TEST_LAMBDA])
+

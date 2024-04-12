@@ -1,5 +1,5 @@
 import pytest
-from TASKS.FUNCTION_EXERCISES.TASK_EXERCISE_1 import *
+from TASKS.FUNCTION_EXERCISES.TASK_EXERCISE_1_READY import *
 
 
 def test_even1_2():

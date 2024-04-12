@@ -1,4 +1,7 @@
 import pytest
+
+from settings import test_path
+
 """
 OOP Exercise 1: Create a Class with instance attributes.
 Write a Python program to create a Vehicle class with max_speed, mileage, name and capacity instance attributes.
@@ -130,4 +133,4 @@ print(f'{simple}.\n func: {simple.seating_capacity(12)}\n',
       f'{second}')
 
 
-pytest.main()
+pytest.main(['-rpP', test_path.TEST_CLASSES])

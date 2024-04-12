@@ -55,14 +55,17 @@ class NewMet(metaclass=Meta):
 
 print(NewMet.attr)  # 100
 
+
 # Class Factory:
 
 class Meta(type):
     def __init__(cls, name, basis, dct):
         cls.attr = 100
 
+
 class X(metaclass=Meta):
     pass
+
 
 class Y(metaclass=Meta):
     pass
@@ -70,13 +73,16 @@ class Y(metaclass=Meta):
 
 print(X.attr, Y.attr)  # 100 100
 
+
 # Simple Inheritance:
 
 class Base:
     attr = 100
 
+
 class A(Base):
     pass
+
 
 class B(Base):
     pass
@@ -84,17 +90,20 @@ class B(Base):
 
 print(A.attr, B.attr)  # 100 100
 
+
 # Class Decor:
 
 def decorator(cls):
     class NewClass(cls):
         attr = 100
+
     return NewClass
 
 
 @decorator
 class C(Base):
     pass
+
 
 @decorator
 class D(Base):

@@ -1,4 +1,6 @@
 import pytest
+from settings import test_path
+
 task1 = [-x for x in range(10)]
 """
 TASK 2. Create comprehension with range(10).
@@ -19,7 +21,7 @@ TASK 4: Use x+1 elem in comprehension.
 task4 = [x + 1 for x in range(10)]
 
 """
-TASK 5:Output (x*x)+1 to 1..10 in comperhension.
+TASK 5:Output (x*x)+1 to 1..10 in comprehension.
 """
 
 task5 = [(x * 2) + 1 for x in range(10)]
@@ -98,6 +100,7 @@ Use variable range range(20) comprehension.
 """
 
 nums14 = [x for x in range(20)]
+
 task14 = [num for num in nums14 if True in [True for divisor in range(2, 10) if num % divisor == 0]]
 
 """
@@ -188,7 +191,7 @@ using : string.ascii_letters[:26]
 
 import string
 
-task24 = {a: i+1 for a, i in zip(string.ascii_letters[:26], range(26))}
+task24 = {a: i + 1 for a, i in zip(string.ascii_letters[:26], range(26))}
 
 """
 TASK 25: Replace all alphabets in the string ‘Lee Quan Yew’, by substituting the alphabet with the corresponding
@@ -199,7 +202,7 @@ d = {}
 [] in 'Lee Quan Yew'
 """
 
-dict25 = {a: i+1 for a, i in zip(string.ascii_lowercase, range(26))}
+dict25 = {a: i + 1 for a, i in zip(string.ascii_lowercase, range(26))}
 task25 = [dict25.get(a.lower(), ' ') for a in 'Lee Quan Yew']
 
 """
@@ -207,11 +210,11 @@ task25 = [dict25.get(a.lower(), ' ') for a in 'Lee Quan Yew']
 """
 
 sentences26 = ["The Hubble Space telescope has spotted",
-             "a formation of galaxies that resembles",
-             "a smiling face in the sky"]
+               "a formation of galaxies that resembles",
+               "a smiling face in the sky"]
 stopwords26 = {'face', 'formation', 'galaxies', 'has', 'hubble', 'resembles',
-             'sky', 'smiling', 'space', 'spotted', 'telescope', 'that', 'the'}
+               'sky', 'smiling', 'space', 'spotted', 'telescope', 'that', 'the'}
 
 task26 = {word.lower() for sentence in sentences26 for word in sentence.split(' ') if word not in stopwords26}
 
-pytest.main(['-rpP', '..\\TESTS\\TESTS_COMPREHENSION.py'])
+pytest.main(['-rpP', test_path.TEST_COMPREHENSION])
